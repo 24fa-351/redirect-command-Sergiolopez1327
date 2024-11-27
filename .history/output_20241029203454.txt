@@ -1,2 +1,0 @@
-Terminal Command: ./main input.txt "wc -w" output.txt     
-      20
