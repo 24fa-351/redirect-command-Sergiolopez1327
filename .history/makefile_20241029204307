@@ -1,0 +1,16 @@
+thready: thready.c \
+		pattern1.c pattern2.c pattern3.c \
+		pattern1.h pattern2.h pattern3.h
+	gcc -o thready thready.c pattern1.c pattern2.c pattern3.c
+
+results: thready
+	(echo "Pattern 1:"; ./thready 1 ${shell bc --expression="$$RANDOM % 15 + 5"}; \
+	echo; \
+	echo "Pattern 2:"; ./thready 2 ${shell bc --expression="$$RANDOM % 15 + 5"}; \
+	echo; \
+	echo "Pattern 3:"; ./thready 3 ${shell bc --expression="$$RANDOM % 20 + 5"}) \
+		> results.txt 2>&1
+
+clean:
+	rm -f thready
+

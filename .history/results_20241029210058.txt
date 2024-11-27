@@ -1,0 +1,22 @@
+Test 1: ./main input.txt wc -w output.txt
+20
+
+Test 2: ./main input.txt wc -l output.txt
+3
+
+Test 3: ./main input.txt /bin/ls output.txt
+LICENSE
+README.md
+abspath.c
+abspath.h
+input.txt
+main
+main.c
+makefile
+output.txt
+redirect.c
+redirect.h
+results.txt
+split.c
+split.h
+

@@ -51,5 +51,8 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
-main
+# Local files
+input.txt
 output.txt
+results.txt
+.history
